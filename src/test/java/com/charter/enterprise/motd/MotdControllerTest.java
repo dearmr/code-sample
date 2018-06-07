@@ -22,8 +22,22 @@ public class MotdControllerTest {
 
     @Test
     public void getMotd() throws Exception {
+    	
+    	final String newMessage = "New updated message";
+    	
         mvc.perform(MockMvcRequestBuilders.get("/"))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Goodbye world!")));
+                .andExpect(content().string(equalTo("Welcome to Charter.  All systems are nominal.")));
+        
+        mvc.perform(MockMvcRequestBuilders.put("/")
+        		                          .content(newMessage)
+        		                          .contentType("plain/text"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("Message Updated")));
+
+        mvc.perform(MockMvcRequestBuilders.get("/"))
+        .andExpect(status().isOk())
+        .andExpect(content().string(equalTo(newMessage)));
+
     }
 }

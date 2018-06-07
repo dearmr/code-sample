@@ -31,3 +31,6 @@ If you whiz through this sample, try adding a deployment.   We are a Docker and 
   * The official Spring Boot "hello world" example is a great starting point.
 * Still need help?
   * Further hints are available, Feel free to ask questions here.  Edit this file in your branch by adding to the questions section, push it, and we will update the file with answers. 
+  
+  06/06/2018: Made changes to implement ability to update the returned message by calling a PUT with the new message in the request body. All changes are obvious.
+  Trying to push the package to Heroky, but there may be some network issue, it's already uploading 16MB for two hours, and is at about 30%. Will update if things improve.
