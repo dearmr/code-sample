@@ -34,3 +34,5 @@ If you whiz through this sample, try adding a deployment.   We are a Docker and 
   
   06/06/2018: Made changes to implement ability to update the returned message by calling a PUT with the new message in the request body. All changes are obvious.
   Trying to push the package to Heroky, but there may be some network issue, it's already uploading 16MB for two hours, and is at about 30%. Will update if things improve.
+  06/07/2018: The app has finally been deployed to Heroky and is available at https://damp-bastion-90461.herokuapp.com/
+
